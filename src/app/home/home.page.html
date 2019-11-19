@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      EL ABC DE 
+      LOS ANIMALES
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <label>
+        <input
+        type="checkbox"
+        checked/>
+        <div>
+        <span class="on">On</span>
+        <span class="off">Off</span>
+        </div>
+        <i></i>
+    </label>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let animal of Animales">
+          <ion-card (click) = "reproducirAnimal(animal)">
+            <img onclick="this.classList.toggle('clicked'); console.log('click recibido FATIMA LOZOYA')" src="{{animal.imagen}}">
+                  <ion-card-header>
+                      <ion-card-subtitle>{{animal.nombre}}</ion-card-subtitle>
+                      <ion-card-title>{{animal.nombre}}</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                        {{animal.info}}
+                      </ion-card-content>
+            </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+
+
+</ion-content>
+
